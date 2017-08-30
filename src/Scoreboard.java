@@ -4,6 +4,8 @@ import java.util.Comparator;
 
 public class Scoreboard{
 	
+	protected boolean founded = false;
+	
 	ArrayList<GameEntry> scores = new ArrayList<GameEntry>();
 
 	public Scoreboard() {}
@@ -16,6 +18,19 @@ public class Scoreboard{
 			}
 		}
 		scores.add(entry);
+	}
+	
+	public void removePlayer(String name) throws Exception{
+		
+		for(int i = 0; i < scores.size(); i++){
+			if(scores.get(i).getName().equals(name)){
+				scores.remove(scores.get(i));
+				founded = true;
+			}
+		}
+		
+		if(!founded)
+			throw new Exception("There is not player with that name.");
 	}
 	
 	public void sortScores(){

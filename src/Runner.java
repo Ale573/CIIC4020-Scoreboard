@@ -29,7 +29,8 @@ public class Runner {
 			System.out.println("2. The person in the specific rank.");
 			System.out.println("3. The rank of one player.");
 			System.out.println("4. Show the Scoreboard.");
-			System.out.println("5. Exit.");
+			System.out.println("5. Remove a player.");
+			System.out.println("6. Exit.");
 			System.out.println("What is your choice?");
 			
 			int decision = in.nextInt();
@@ -76,6 +77,18 @@ public class Runner {
 				break;
 
 			case 5:
+				System.out.println("What is the name of the player?");
+				String remove = in.next();
+				
+				board.removePlayer(remove);
+				
+				System.out.println("The player has been removed.");
+				System.out.println();
+				
+				board.founded = false;
+								
+				break;
+			case 6:
 				quit = true;
 				System.out.println("Thanks for your time.");
 				break;
