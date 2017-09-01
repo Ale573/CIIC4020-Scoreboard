@@ -10,15 +10,15 @@ public class Scoreboard{
 
 	public Scoreboard() {}
 	
-	public void addGameEntry(GameEntry entry) throws Exception{
+	public void addPlayer(GameEntry player) throws Exception{
 		
 		for(int i = 0; i < scores.size(); i++){
-			if(scores.get(i).getName().equals(entry.getName())){
+			if(scores.get(i).getName().equals(player.getName())){
 				throw new Exception("The name is already in use.");
 			}
 		}
 		
-		scores.add(entry);
+		scores.add(player);
 	}
 	
 	public void removePlayer(String name) throws Exception{

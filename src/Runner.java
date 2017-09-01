@@ -8,15 +8,15 @@ public class Runner {
 		Scanner in = new Scanner(System.in);
 
 // 		Base players
-		board.addGameEntry(new GameEntry("Pedro", 1000));
+		board.addPlayer(new GameEntry("Pedro", 1000));
 
-		board.addGameEntry(new GameEntry("Maria", 2000));
+		board.addPlayer(new GameEntry("Maria", 2000));
 
-		board.addGameEntry(new GameEntry("Ruben", 500));
+		board.addPlayer(new GameEntry("Ruben", 500));
 
-		board.addGameEntry(new GameEntry("Mario", 5000));
+		board.addPlayer(new GameEntry("Mario", 5000));
 
-		board.addGameEntry(new GameEntry("Vanesa", 100));
+		board.addPlayer(new GameEntry("Vanesa", 100));
 
 		board.sortScores();
 
@@ -44,7 +44,7 @@ public class Runner {
 				System.out.println("How much points the player has?");
 				int points = in.nextInt();
 
-				board.addGameEntry(new GameEntry(name, points));
+				board.addPlayer(new GameEntry(name, points));
 
 				System.out.println("The player has been added.");
 				System.out.println();
