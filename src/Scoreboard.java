@@ -35,12 +35,14 @@ public class Scoreboard{
 	
 	public void sortScores(){
 		
+		// Sort the scores least to greatest 
 		Collections.sort(scores, new Comparator <GameEntry>() {
 			public int compare(GameEntry entry1, GameEntry entry2) {
 				return Integer.compare(entry1.getPoints(), entry2.getPoints());
 			}
 		});
 		
+		// Invert the scores greatest to least 
 		Collections.reverse(scores);
 	}
 	

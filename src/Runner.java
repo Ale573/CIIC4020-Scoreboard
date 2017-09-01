@@ -7,7 +7,7 @@ public class Runner {
 		Scoreboard board = new Scoreboard();
 		Scanner in = new Scanner(System.in);
 
-// 		Test code
+// 		Base players
 		board.addGameEntry(new GameEntry("Pedro", 1000));
 
 		board.addGameEntry(new GameEntry("Maria", 2000));
@@ -25,9 +25,9 @@ public class Runner {
 		while(!quit){
 			
 			System.out.println("Menu: ");
-			System.out.println("1. Add a new entry.");
-			System.out.println("2. The person in the specific rank.");
-			System.out.println("3. The rank of one player.");
+			System.out.println("1. Add a new player.");
+			System.out.println("2. Show the player in a the specific rank.");
+			System.out.println("3. Show the rank of an specific player.");
 			System.out.println("4. Show the Scoreboard.");
 			System.out.println("5. Remove a player.");
 			System.out.println("6. Exit.");
