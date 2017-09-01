@@ -17,6 +17,7 @@ public class Scoreboard{
 				throw new Exception("The name is already in use.");
 			}
 		}
+		
 		scores.add(entry);
 	}
 	
@@ -47,20 +48,24 @@ public class Scoreboard{
 	}
 	
 	public String getName(int rank){
+		
 		return scores.get(rank - 1).getName();
 	}
 	
 	public int getRank(String name) throws Exception{
 	
 		for(int i = 0; i < scores.size(); i++){
+			
 			if(scores.get(i).getName().equals(name)){
 				return (i + 1);
 			}
 		}
+		
 		throw new Exception("The player " + name + " is not in the Scoreboard.");
 	}
 	
 	public int getPoints(int rank){
+		
 		return scores.get(rank - 1).getPoints();
 	}
 	

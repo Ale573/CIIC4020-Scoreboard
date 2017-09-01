@@ -91,11 +91,13 @@ public class Runner {
 			case 6:
 				quit = true;
 				System.out.println("Thanks for your time.");
+				
 				break;
 
 			default:
 				System.out.println("The option that you select is not avalible. Please select another option.");
 				System.out.println();
+				
 				break;
 			}
 		}		
